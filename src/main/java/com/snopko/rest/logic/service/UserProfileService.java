@@ -32,6 +32,7 @@ public class UserProfileService {
         userProfile = repository.save(userProfile);
 
         UserDtoResponce responce = new UserDtoResponce();
+        responce.setId(userProfile.getId());
         responce.setIdCrypto(userProfile.getCryptoInfo().getIdCrypto());
         responce.setSymbol(crypto.getSymbol());
         responce.setUsername(userProfile.getUsername());
