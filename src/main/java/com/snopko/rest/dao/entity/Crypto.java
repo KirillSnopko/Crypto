@@ -4,6 +4,7 @@ import lombok.Data;
 
 @Data
 public class Crypto {
-    private long id;
+    private int id;
     private String symbol;
 }
+

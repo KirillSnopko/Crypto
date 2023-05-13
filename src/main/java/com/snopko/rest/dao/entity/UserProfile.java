@@ -13,7 +13,7 @@ public class UserProfile {
     @Column(nullable = false)
     private String username;
     @Column(nullable = false)
-    private Crypto crypto;
-    @Column(nullable = false)
-    private double price;
+    private double initPrice;
+    @ManyToOne(targetEntity = CryptoInfo.class, fetch = FetchType.LAZY)
+    private CryptoInfo cryptoInfo;
 }
